@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+    {% load static %} <!-- Подключаем библиотеку static -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- стили -->
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+<body>
+<div class="wrapper">
+    <div class="header">
+        <div class="header__container">
+            <div class="header__logo">
+                <div class="burger-menu">
+                    <div class="burger-menu__icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <!-- логотип -->
+                <img src="{% static 'assets/logo.png' %}" alt="логотип">
+            </div>
+            <nav class="header__nav">
+                <a href="#">преимущества</a>
+                <a href="#">фотографии</a>
+            </nav>
+            <div class="header__cover_btn">
+                <button class="header__btn_logIn">ВХОД</button>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="main__container">
+            <div class="main__cover">
+                <div class="main__header">
+                    <h1 class="main__title">тестовое задание</h1>
+                    <div class="main__subtitle">тестовое задание задание для собесодавания в компанию вагнер.рф</div>
+                </div>
+                <div class="main__info">
+                    <div class="main__svg_icons">
+                        <div class="main__icon">
+                            <div class="main__icon_cover">
+                                <!-- SVG  -->
+                                <img src="{% static 'assets/mainPage/icon1.svg' %}" alt="svg icons">
+                            </div>
+                            <div class="main__icon_text">Тут должен быть текст!</div>
+                        </div>
+                        <div class="main__icon">
+                            <div class="main__icon_cover">
+                                <img src="{% static 'assets/mainPage/icon2.svg' %}" alt="svg icons">
+                            </div>
+                            <div class="main__icon_text">Тут должен быть текст!</div>
+                        </div>
+                        <div class="main__icon">
+                            <div class="main__icon_cover">
+                                <img src="{% static 'assets/mainPage/icon3.svg' %}" alt="svg icons">
+                            </div>
+                            <div class="main__icon_text">Тут должен быть текст!  </div>
+                        </div>
+                        <div class="main__icon">
+                            <div class="main__icon_cover">
+                                <img src="{% static 'assets/mainPage/icon4.svg' %}" alt="svg icons">
+                            </div>
+                            <div class="main__icon_text">Тут должен быть текст!     .</div>
+                        </div>
+                    </div>
+                    <div class="main__cat_cover">
+                        <!-- картинка справа - дроч -->
+                        <img src="{% static 'assets/mainPage/mainCat.png' %}" alt="картинка космоса">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slider">
+            <div class="sliders__container">
+                <div class="slider__title">
+                    <h3 class="slider__text__title">Фотографии</h3>
+                </div>
+                <div class="slider__sliders">
+                    <div class="slider__big_img">
+                        <img class="slider__big_img" data-id="1" src="{% static 'assets/sliders/1.jpg' %}" alt="картинка">
+                    </div>
+                </div>
+                <div class="slider__cover">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img data-id="1" src="{% static 'assets/sliders/5.jpg' %}" alt="картинка">
+                            </div>
+                            <div class="swiper-slide">
+                                <img data-id="2" src="{% static 'assets/sliders/1.jpg' %}" alt="картинка">
+                            </div>
+                            <div class="swiper-slide">
+                                <img data-id="3" src="{% static 'assets/sliders/2.jpg' %}" alt="картинка">
+                            </div>
+                            <div class="swiper-slide">
+                                <img data-id="4" src="{% static 'assets/sliders/3.jpg' %}" alt="картинка">
+                            </div>
+                            <div class="swiper-slide">
+                                <img data-id="5" src="{% static 'assets/sliders/4.jpg' %}" alt="картинка">
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal">
+        <div class="modal__content"></div>
+    </div>
+</div>
+<nav class="burger-menu__nav">
+    <ul>
+        <li><a href="#section1">Преимущества</a></li>
+        <li><a href="#section2">Фотографии</a></li>
+    </ul>
+</nav>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script type="module" src="{% static 'js/index.js' %}"></script>
+</body>
+</html>
+

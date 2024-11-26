@@ -1,0 +1,131 @@
+.slider__sliders {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.slider__big_img {
+    justify-content: center;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+    @media (min-width: 767.98px) {
+        width: 800px;
+        max-height: 450px;
+    }
+    @media (max-width: 767.98px) {
+        width: auto;
+        max-height: 380px;
+    }
+}
+
+.slider__big_img img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+
+.slider__title {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.slider {
+    background-color: #3C3C3C;
+    padding-top: 30px;
+    padding-bottom: 160px;
+}
+
+.slider__text__title {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: #ffffff;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    @media (min-width: 767.98px) and (max-width: 1300px) {
+        padding-top: 36px;
+    }
+    @media (max-width: 767.98px) {
+        padding-top: 30px;
+    }
+}
+
+.swiper {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.swiper-wrapper {
+    display: flex;
+}
+
+.swiper-slide {
+    position: relative;
+    border-radius: 10px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.swiper-slide img {
+    width: 165px;
+    height: 165px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.swiper-slide-active {
+    transform: scale(1.1);
+}
+
+.swiper-button-next, .swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.swiper-button-prev::before,
+.swiper-button-next::before{
+        content: '';
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 8px;
+
+}
+
+.swiper-button-prev::before {
+    transform: rotate(135deg);
+}
+.swiper-button-next::before {
+    transform: rotate(-45deg);
+}
+
+.swiper-button-next {
+    right: 10px;
+}
+
+.swiper-button-prev {
+    left: 10px;
+}
+
+.swiper-button-next:hover, .swiper-button-prev:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
